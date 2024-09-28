@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superman Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Sticky Navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #ff0000; /* Superman red */
+        }
+
+        /* Hero Section */
+        .hero-image {
+            background-image: url('superman-background.jpg'); /* Replace with the actual image file name */
+            height: 100vh; /* Full height of the viewport */
+            background-size: cover; /* Ensure the image covers the entire section */
+            background-position: center; /* Center the image */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .intro-text {
+            color: white;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+        }
+
+        #skills, #projects, #contact {
+            text-align: center;
+        }
+
+        /* Skills */
+        .skills-container ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .skills-container ul li {
+            margin: 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Achievements */
+        #projects ul {
+            list-style: none;
+        }
+
+        #projects ul li {
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 0 auto;
+            background-color: aquamarine;
+        }
+
+        form input, form textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+
+        form button {
+            padding: 0.5rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #ff0000;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #333;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .social-links a:hover {
+            color: #ff0000;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-container ul {
+                flex-direction: column;
+            }
+
+            form {
+                width: 90%;
+            }
+
+            .intro-text {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Introduction Section with Background Image -->
+    <section id="home" class="section intro">
+        <div class="hero-image">
+            <div class="intro-text">
+                <img src="superman.jpg" alt="Superman" class="profile-pic"> <!-- Add Superman's profile picture here -->
+                <h1>I'm Superman</h1>
+                <p>The Man of Steel</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <ul>
+                <li>Flight</li>
+                <li>Super Strength</li>
+                <li>X-ray Vision</li>
+                <li>Heat Vision</li>
+                <li>Super Speed</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="projects" class="section">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Saved Metropolis countless times</li>
+            <li>Defeated General Zod</li>
+            <li>Member of the Justice League</li>
+            <li>Stopped an alien invasion</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+    </section>
+
+</body>
+</html>
